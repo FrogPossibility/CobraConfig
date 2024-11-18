@@ -1,0 +1,30 @@
+{
+    "name": "cobraconfig",
+    "version": "1.0.0",
+    "description": "",
+    "main": "main.js",
+    "scripts": {
+        "start": "node main.js",
+        "build": "pkg . --targets node16-win-x64 --output CobraConfig.exe --icon cobra.ico"
+    },
+    "bin": "main.js",
+    "pkg": {
+        "assets": [
+            "node_modules/**/*"
+        ],
+        "targets": [
+            "node16-win-x64"
+        ]
+    },
+    "author": "FrogPossibility",
+    "license": "MIT",
+    "dependencies": {
+        "chalk": "^4.1.2",
+        "figlet": "^1.8.0",
+        "inquirer": "^8.2.6",
+        "ora": "^5.4.1"
+    },
+    "devDependencies": {
+        "pkg": "^5.8.1"
+    }
+}
