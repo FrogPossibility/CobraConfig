@@ -1,11 +1,11 @@
 {
     "name": "cobraconfig",
     "version": "1.0.0",
-    "description": "",
+    "description": "A Python Tool",
     "main": "main.js",
     "scripts": {
         "start": "node main.js",
-        "build": "pkg . --targets node16-win-x64 --output CobraConfig.exe --icon cobra.ico"
+        "build": "pkg . --targets node16-win-x64 --output CobraConfig.exe"
     },
     "bin": "main.js",
     "pkg": {
