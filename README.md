@@ -19,12 +19,12 @@ Simple: fill out the form according to your needs and you're done!
 Data Analyst? Python UI Designer? AI Engineer? Web Developer? Or a simple newbie? CobraConfig structures your project according to your ideas: for AI, Web Apps, API, Data Science, Maching Learning or GUI. 
 It can also speed up the build process by immediately configuring the virtual environment, dependencies, git config and more!!
 
-![screenshot](.github/screen1.png)
+![screenshot1](.github/screen1.png)
 
 ## WHY AM I STILL READING THIS README AND NOT DOWNLOADING COBRACONFIG? 🤡
 You tell me! Get a move on and look at the [releases](https://github.com/FrogPossibility/CobraConfig/releases/tag/v.1.0.0) for the installer!!
 
-![screenshot](.github/screen3.png)
+![screenshot3](.github/screen3.png)
 
 ________________________
 
