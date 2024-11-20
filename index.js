@@ -337,8 +337,8 @@ function createProjectStructure(folderPath, projectType) {
     ],
     'Data Science': [
       'notebooks/exploration.ipynb',
-      'data/raw/README.md',
-      'data/processed/README.md',
+      'data/raw/',
+      'data/processed/',
       'src/data_processing',
       'src/features',
       'src/models',
@@ -348,7 +348,7 @@ function createProjectStructure(folderPath, projectType) {
     'Machine Learning': [
       'data/raw',
       'data/processed',
-      'models/README.md',
+      'models/',
       'notebooks',
       'src/features',
       'src/models',
@@ -374,7 +374,7 @@ function createProjectStructure(folderPath, projectType) {
   };
 
   const structure = structures[projectType] || ['src', 'tests', 'docs'];
-  
+
   structure.forEach(item => {
     const fullPath = path.join(folderPath, item);
     if (item.endsWith('.py') || item.endsWith('.html') || item.endsWith('.yaml') || item.endsWith('.ipynb')) {
@@ -384,8 +384,10 @@ function createProjectStructure(folderPath, projectType) {
     } else {
       // Crea la directory
       fs.mkdirSync(fullPath, { recursive: true });
-      // Se è una directory che dovrebbe contenere un README, aggiungilo
-      if (item.endsWith('raw') || item.endsWith('processed') || item.endsWith('models')) {
+      // Se è una directory che dovrebbe contenere un README, aggiungilo solo se non è 'data/raw' o 'data/processed'
+      if (item === 'data/raw' || item === 'data/processed') {
+        // Non creare README.md per queste cartelle
+      } else if (item.endsWith('models')) {
         fs.writeFileSync(path.join(fullPath, 'README.md'), 
           `# ${path.basename(item)}\n\nThis directory contains ${getDirectoryDescription(item)}`);
       }
