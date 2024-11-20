@@ -1,13 +1,13 @@
 {
     "name": "cobraconfig",
-    "version": "1.0.0",
+    "version": "1.1.1",
     "description": "A Python Tool",
-    "main": "main.js",
+    "main": "index.js",
     "scripts": {
-        "start": "node main.js",
+        "start": "node index.js",
         "build": "pkg . --targets node16-win-x64 --output CobraConfig.exe"
     },
-    "bin": "main.js",
+    "bin": "index.js",
     "pkg": {
         "assets": [
             "node_modules/**/*"
