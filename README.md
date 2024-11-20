@@ -24,7 +24,23 @@ You tell me! Get a move on and look at the [releases](https://github.com/FrogPos
 ________________________
 
 ## HOW TO BUILD
-First download the source code with git:
+1. download the source code with git:
 ```
-git  
+git clone https://github.com/FrogPossibility/CobraConfig.git
+cd CobraConfig
+```
+
+2. install the dependencies:
+```
+npm install
+```
+
+3. test it:
+```
+node main.js
+```
+
+3. build it:
+```
+npm run build
 ```
