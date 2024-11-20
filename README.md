@@ -20,3 +20,11 @@ It can also speed up the build process by immediately configuring the virtual en
 
 ## WHY AM I STILL READING THIS README AND NOT DOWNLOADING COBRACONFIG? 🤡
 You tell me! Get a move on and look at the [releases](https://github.com/FrogPossibility/CobraConfig/releases/tag/v.1.0.0) for the installer!!
+
+________________________
+
+## HOW TO BUILD
+First download the source code with git:
+```
+git  
+```
