@@ -1,0 +1,8 @@
+Hey! 
+Thank you very much for downloading our CobraConfig python tool (v. 1.1.2-x64)!
+If you still don't know how to use it, visit our repository on GitHub, you will find all the details:
+https://github.com/FrogPossibility/CobraConfig
+
+
+If by chance you encounter some problems or bugs you can let us know here:
+https://github.com/FrogPossibility/CobraConfig/issues

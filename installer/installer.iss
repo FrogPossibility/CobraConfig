@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "CobraConfig"
-#define MyAppVersion "1.1.0"
+#define MyAppVersion "1.1.2"
 #define MyAppPublisher "FrogPossibility"
 #define MyAppURL "https://github.com/FrogPossibility/CobraConfig"
 #define MyAppExeName "CobraConfig.exe"
@@ -13,7 +13,7 @@
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{85328035-F566-4A22-8282-A6D7889E8F48}
+AppId={{21B5ABA5-27C5-43DF-9CFB-EFC7570025FB}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
@@ -32,10 +32,11 @@ ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 ChangesAssociations=yes
 DisableProgramGroupPage=yes
+InfoAfterFile=C:\PyHelper\installer\end-installation.txt
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
-OutputBaseFilename=mysetup
-SetupIconFile=C:\PyHelper\cobra.ico
+OutputBaseFilename=CobraConfig-installer
+SetupIconFile=C:\PyHelper\.github\installer-icon.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
