@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="cobra.ico" alt="drawing" width="200"/>
+  <img src=".github/icon.ico" alt="drawing" width="200"/>
 </p>
 <h1 align="center">CobraConfig 🐍</h1>
 
