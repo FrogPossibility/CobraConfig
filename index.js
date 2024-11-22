@@ -32,43 +32,49 @@ async function mainMenu() {
 
 // Funzione per clonare un repository Git
 async function cloneRepository() {
-  const answers = await inquirer.prompt([
-    {
-      name: 'repoUrl',
-      type: 'input',
-      message: 'Enter the URL of the repository to clone:',
-      validate(input) {
-        if (!input) {
-          return 'The repository URL cannot be empty.';
-        }
-        return true;
-      },
-    },
-    {
-      name: 'destination',
-      type: 'input',
-      message: 'Enter the directory where you want to clone the repository:',
-      default() {
-        return 'C:/'; // Puoi cambiare il valore predefinito se necessario
-      },
-    },
-  ]);
+  try {
+    await checkPrerequisites(); // Verifica i prerequisiti prima di clonare
 
-  const { repoUrl, destination } = answers;
-  const folderName = path.basename(repoUrl, '.git'); // Ottieni il nome della cartella dal URL
+    const answers = await inquirer.prompt([
+      {
+        name: 'repoUrl',
+        type: 'input',
+        message: 'Enter the URL of the repository to clone:',
+        validate(input) {
+          if (!input) {
+            return 'The repository URL cannot be empty.';
+          }
+          return true;
+        },
+      },
+      {
+        name: 'destination',
+        type: 'input',
+        message: 'Enter the directory where you want to clone the repository:',
+        default() {
+          return 'C:/'; // Puoi cambiare il valore predefinito se necessario
+        },
+      },
+    ]);
 
-  const folderPath = path.join(destination, folderName);
-  
-  const spinner = ora(`Cloning repository from ${repoUrl}...`).start();
-  
-  exec(`git clone ${repoUrl}`, { cwd: destination }, (error) => {
-    spinner.stop();
-    if (error) {
-      console.error(chalk.red(`Error cloning repository: ${error.message}`));
-    } else {
-      console.log(chalk.green(`Repository cloned successfully into ${folderPath}!`));
-    }
-  });
+    const { repoUrl, destination } = answers;
+    const folderName = path.basename(repoUrl, '.git'); // Ottieni il nome della cartella dal URL
+
+    const folderPath = path.join(destination, folderName);
+    
+    const spinner = ora(`Cloning repository from ${repoUrl}...`).start();
+    
+    exec(`git clone ${repoUrl}`, { cwd: destination }, (error) => {
+      spinner.stop();
+      if (error) {
+        console.error(chalk.red(`Error cloning repository: ${error.message}`));
+      } else {
+        console.log(chalk.green(`Repository cloned successfully into ${folderPath}!`));
+      }
+    });
+  } catch (error) {
+    console.error(chalk.red(error.message));
+  }
 }
 
 
@@ -106,18 +112,30 @@ function checkPrerequisites() {
   const spinner = ora('Checking prerequisites...').start();
 
   return new Promise((resolve, reject) => {
+    // Controllo per Python
     exec('python --version', (error) => {
-      spinner.stop();
       if (error) {
+        spinner.stop();
         console.error(chalk.red('Error: Python is not installed or configured incorrectly in the PATH.'));
         reject(new Error('Python not found'));
       } else {
         console.log(chalk.green('Python is configured correctly.'));
-        resolve();
+        // Controllo per Git
+        exec('git --version', (error) => {
+          spinner.stop();
+          if (error) {
+            console.error(chalk.red('Error: Git is not installed or configured incorrectly in the PATH.'));
+            reject(new Error('Git not found'));
+          } else {
+            console.log(chalk.green('Git is configured correctly.'));
+            resolve();
+          }
+        });
       }
     });
   });
 }
+
 
 // Funzione per creare una licenza
 function createLicense(folderPath, licenseType) {
