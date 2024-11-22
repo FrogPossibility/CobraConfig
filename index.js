@@ -9,6 +9,69 @@ const ora = require('ora');
 const figlet = require('figlet');
 const questions = require('./utilities/questions');
 
+// Funzione principale per gestire il menu iniziale
+async function mainMenu() {
+  const answer = await inquirer.prompt([
+    {
+      type: 'list',
+      name: 'action',
+      message: 'What would you like to do?',
+      choices: [
+        'Create a new project',
+        'Clone a repository from Git',
+      ],
+    },
+  ]);
+
+  if (answer.action === 'Create a new project') {
+    await createProject();
+  } else if (answer.action === 'Clone a repository from Git') {
+    await cloneRepository();
+  }
+}
+
+// Funzione per clonare un repository Git
+async function cloneRepository() {
+  const answers = await inquirer.prompt([
+    {
+      name: 'repoUrl',
+      type: 'input',
+      message: 'Enter the URL of the repository to clone:',
+      validate(input) {
+        if (!input) {
+          return 'The repository URL cannot be empty.';
+        }
+        return true;
+      },
+    },
+    {
+      name: 'destination',
+      type: 'input',
+      message: 'Enter the directory where you want to clone the repository:',
+      default() {
+        return 'C:/'; // Puoi cambiare il valore predefinito se necessario
+      },
+    },
+  ]);
+
+  const { repoUrl, destination } = answers;
+  const folderName = path.basename(repoUrl, '.git'); // Ottieni il nome della cartella dal URL
+
+  const folderPath = path.join(destination, folderName);
+  
+  const spinner = ora(`Cloning repository from ${repoUrl}...`).start();
+  
+  exec(`git clone ${repoUrl}`, { cwd: destination }, (error) => {
+    spinner.stop();
+    if (error) {
+      console.error(chalk.red(`Error cloning repository: ${error.message}`));
+    } else {
+      console.log(chalk.green(`Repository cloned successfully into ${folderPath}!`));
+    }
+  });
+}
+
+
 function createReadme(folderPath, projectName, projectType) {
   const readmeContent = `
 # ${projectName}
@@ -497,4 +560,4 @@ function getLicenseSection(license) {
 }
 
 // Avvio dello script
-createProject();
+mainMenu();
