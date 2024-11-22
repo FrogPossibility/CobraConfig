@@ -247,7 +247,6 @@ CMD ["python", "main.py"]
 
 // Domande interattive
 async function askQuestions() {
-  console.log(chalk.cyan(figlet.textSync('CobraConfig')));
   const answers = await inquirer.prompt(questions);
   return answers;
 }
@@ -577,5 +576,6 @@ function getLicenseSection(license) {
   return license === 'None' ? 'This project does not yet have a license.' : `This project is under license ${license}.`;
 }
 
+console.log(chalk.cyan(figlet.textSync('CobraConfig')));
 // Avvio dello script
 mainMenu();
