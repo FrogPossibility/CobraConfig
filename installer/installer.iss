@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "CobraConfig"
-#define MyAppVersion "1.1.2"
+#define MyAppVersion "1.2.1"
 #define MyAppPublisher "FrogPossibility"
 #define MyAppURL "https://github.com/FrogPossibility/CobraConfig"
 #define MyAppExeName "CobraConfig.exe"
@@ -13,7 +13,7 @@
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{21B5ABA5-27C5-43DF-9CFB-EFC7570025FB}
+AppId={{AEEF6DE9-235A-4E04-89CB-D2A94577FC95}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
