@@ -358,7 +358,7 @@ async function createProject() {
       createLicense(folderPath, license);
     }
 
-    console.log(chalk.cyan(figlet.textSync('Setup Complete!')));
+    console.log(chalk.green(figlet.textSync('Setup Complete!')));
     
     await new Promise(resolve => setTimeout(resolve, 1000));
     await askToRestart();
