@@ -18,15 +18,15 @@ async function mainMenu() {
       name: 'action',
       message: 'What would you like to do?',
       choices: [
-        'Create a new project',
-        'Clone a repository from Git',
+        'Create a new project ✨',
+        'Clone a repository from Git 🐙',
       ],
     },
   ]);
 
-  if (answer.action === 'Create a new project') {
+  if (answer.action === 'Create a new project ✨') {
     await createProject();
-  } else if (answer.action === 'Clone a repository from Git') {
+  } else if (answer.action === 'Clone a repository from Git 🐙') {
     await cloneRepository();
   }
 }
@@ -53,13 +53,13 @@ async function cloneRepository() {
         type: 'input',
         message: 'Enter the directory where you want to clone the repository:',
         default() {
-          return 'C:/'; // Puoi cambiare il valore predefinito se necessario
+          return 'C:/';
         },
       },
     ]);
 
     const { repoUrl, destination } = answers;
-    const folderName = path.basename(repoUrl, '.git'); // Ottieni il nome della cartella dal URL
+    const folderName = path.basename(repoUrl, '.git');
 
     const folderPath = path.join(destination, folderName);
     
@@ -68,7 +68,7 @@ async function cloneRepository() {
     exec(`git clone ${repoUrl}`, { cwd: destination }, (error) => {
       spinner.stop();
       if (error) {
-        console.error(chalk.red(`Error cloning repository: ${error.message}`));
+        console.error(chalk.bgRed(`Error cloning repository: ${error.message}`));
       } else {
         console.log(chalk.green(`Repository cloned successfully into ${folderPath}!`));
       }
@@ -117,18 +117,19 @@ function checkPrerequisites() {
     exec('python --version', (error) => {
       if (error) {
         spinner.stop();
-        console.error(chalk.red('Error: Python is not installed or configured incorrectly in the PATH.'));
+        console.error(chalk.bgRed('Error: Python is not installed or configured incorrectly in the PATH.'));
         reject(new Error('Python not found'));
       } else {
-        console.log(chalk.green('Python is configured correctly.'));
+        console.log('');
+        console.log(chalk.green('Python is configured correctly 🐍'));
         // Controllo per Git
         exec('git --version', (error) => {
           spinner.stop();
           if (error) {
-            console.error(chalk.red('Error: Git is not installed or configured incorrectly in the PATH.'));
+            console.error(chalk.bgRed('Error: Git is not installed or configured incorrectly in the PATH.'));
             reject(new Error('Git not found'));
           } else {
-            console.log(chalk.green('Git is configured correctly.'));
+            console.log(chalk.green('Git is configured correctly 🐙'));
             resolve();
           }
         });
@@ -150,8 +151,9 @@ function createLicense(folderPath, licenseType) {
   if (!licenseContent) return;
 
   const licensePath = path.join(folderPath, 'LICENSE');
+  const spinner = ora('creating LICENSE file...').start();
   fs.writeFileSync(licensePath, licenseContent);
-  console.log(chalk.green(`LICENSE file (${licenseType}) created successfully!`));
+  spinner.succeed(`LICENSE file (${licenseType}) created successfully! ⚖️`);
 }
 
 // Funzione per installare dipendenze
@@ -173,12 +175,12 @@ async function installDependencies(folderPath, virtualEnvName, requirementsPath,
   const spinner = ora('Installing dependencies...').start();
   return new Promise((resolve, reject) => {
     exec(command, { cwd: folderPath }, (error, stdout, stderr) => {
-      spinner.stop();
       if (error) {
-        console.error(chalk.red(`Error installing dependencies: ${stderr.trim()}`));
+        spinner.stop();
+        console.error(chalk.bgRed(`Error installing dependencies: ${stderr.trim()}`));
         reject(error);
       } else {
-        console.log(chalk.green('Dependencies installed successfully!'));
+        spinner.succeed('Dependencies installed successfully ⚙️');
         resolve();
       }
     });
@@ -190,7 +192,7 @@ function createFolderStructure(folderPath, folderStructure) {
   folderStructure.forEach((subFolder) => {
     const subFolderPath = path.join(folderPath, subFolder);
     fs.mkdirSync(subFolderPath, { recursive: true });
-    console.log(chalk.green(`Folder '${subFolder}' created successfully!`));
+    console.log(chalk.green(`Folder '${subFolder}' created successfully 📂`));
   });
 }
 
@@ -206,8 +208,9 @@ __pycache__/
 `;
 
   const gitignorePath = path.join(folderPath, '.gitignore');
+  const spinner = ora('creating .gitignore file...').start();
   fs.writeFileSync(gitignorePath, gitignoreContent);
-  console.log(chalk.green('.gitignore file created successfully!'));
+  spinner.succeed('.gitignore file created successfully 🗑️');
 }
 
 // Funzione per inizializzare un repository Git
@@ -216,12 +219,12 @@ function initializeGitRepo(folderPath) {
 
   return new Promise((resolve, reject) => {
     exec('git init', { cwd: folderPath }, (error, stdout, stderr) => {
-      spinner.stop();
       if (error) {
-        console.error(chalk.red(`Error initializing Git: ${stderr.trim()}`));
+        spinner.stop();
+        console.error(chalk.bgRed(`Error initializing Git: ${stderr.trim()}`));
         reject(error);
       } else {
-        console.log(chalk.green('Git repository initialized successfully!'));
+        spinner.succeed('Git repository initialized successfully 🐙');
         resolve();
       }
     });
@@ -242,8 +245,9 @@ CMD ["python", "main.py"]
 `;
 
   const dockerfilePath = path.join(folderPath, 'Dockerfile');
+  const spinner = ora('Creating Dockerfile...').start();
   fs.writeFileSync(dockerfilePath, dockerfileContent);
-  console.log(chalk.green('Dockerfile successfully created!'));
+  spinner.succeed('Dockerfile successfully created 🐋');
 }
 
 // Domande interattive
@@ -265,10 +269,9 @@ async function askToRestart() {
   ]);
   
   if (answer.shouldRestart) {
-    console.clear(); // Pulisce la console per il nuovo progetto
+    console.clear();
     await createProject();
   } else {
-    console.log(chalk.cyan('Thank you for using CobraConfig python project builder!'));
     console.clear();
     process.exit(0);
   }
@@ -296,16 +299,20 @@ async function createProject() {
 
     const folderPath = path.join(directory, folderName);
 
+    console.log('');
+    console.log(chalk.magenta('------------ BUILDING YOUR PROJECT ------------'));
+
     if (!fs.existsSync(folderPath)) {
+      const spinner = ora('Creating Project folder').start();
       fs.mkdirSync(folderPath, { recursive: true });
-      console.log(chalk.green(`Project folder '${folderName}' created successfully!`));
+      spinner.succeed('Project folder successfully created! 📂');
     }
 
     // Crea sempre la struttura delle cartelle in base al tipo di progetto
     const spinner = ora('Creating project structure...').start();
     try {
       createProjectStructure(folderPath, projectType);
-      spinner.succeed('Project structure successfully created!');
+      spinner.succeed('Project structure successfully created! 🗄️');
     } catch (error) {
       spinner.fail('Error creating project structure');
       throw error;
@@ -316,7 +323,7 @@ async function createProject() {
       const readmeSpinner = ora('Creating README.md...').start();
       try {
         createReadme(folderPath, folderName, projectType, license);
-        readmeSpinner.succeed('README.md created successfully!');
+        readmeSpinner.succeed('README.md created successfully 🌐');
       } catch (error) {
         readmeSpinner.fail('Error creating README.md');
         throw error;
@@ -331,7 +338,7 @@ async function createProject() {
             venvSpinner.fail('Error creating virtual environment.');
             reject(error);
           } else {
-            venvSpinner.succeed('Virtual environment created successfully!');
+            venvSpinner.succeed('Virtual environment created successfully 🧬');
             try {
               await installDependencies(folderPath, virtualEnvName, requirementsPath, dependencies);
               resolve();
@@ -359,7 +366,7 @@ async function createProject() {
       createLicense(folderPath, license);
     }
 
-    console.log(chalk.green(figlet.textSync('Setup Complete!')));
+    console.log(chalk.green(figlet.textSync('Setup Complete! ✅')));
     
     await new Promise(resolve => setTimeout(resolve, 1000));
     await askToRestart();

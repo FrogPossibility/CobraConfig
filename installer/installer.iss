@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "CobraConfig"
-#define MyAppVersion "1.2.1"
+#define MyAppVersion "1.3.0"
 #define MyAppPublisher "FrogPossibility"
 #define MyAppURL "https://github.com/FrogPossibility/CobraConfig"
 #define MyAppExeName "CobraConfig.exe"
@@ -32,11 +32,11 @@ ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 ChangesAssociations=yes
 DisableProgramGroupPage=yes
-InfoAfterFile=C:\PyHelper\installer\end-installation.txt
+InfoAfterFile=C:\projects\CobraConfig\installer\end-installation.txt
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
 OutputBaseFilename=CobraConfig-installer
-SetupIconFile=C:\PyHelper\.github\installer-icon.ico
+SetupIconFile=C:\projects\CobraConfig\.github\installer-icon.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -48,7 +48,7 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\PyHelper\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\projects\CobraConfig\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Registry]
