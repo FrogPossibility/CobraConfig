@@ -51,6 +51,12 @@ node main.js
 npm run build
 ```
 
+## TO DO:
+
+- [ ]  put the project on NPM so it can be used without install. It would be nice to run `npx cobraConfig` to launch this.
+- [ ] adding a real-time project structure 
+of the project that will be created
+
 <img src=".github/Snake-cobra.gif" width="100" height="100" alt="Snake Cobra" style="margin-right: 10px;"><img src=".github/Snake-cobra.gif" width="100" height="100" alt="Snake Cobra" style="margin-right: 10px;">
 <img src=".github/Snake-cobra.gif" width="100" height="100" alt="Snake Cobra" style="margin-right: 10px;">
 <img src=".github/Snake-cobra.gif" width="100" height="100" alt="Snake Cobra" style="margin-right: 10px;"><img src=".github/Snake-cobra.gif" width="100" height="100" alt="Snake Cobra" style="margin-right: 10px;">
