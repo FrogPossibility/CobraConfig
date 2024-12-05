@@ -1,15 +1,8 @@
 <p align="center">
   <img src=".github/icon.ico" alt="drawing" width="200"/>
 </p>
-<div style="display: flex; align-items: center; justify-content: center;">
 
-  <img src=".github/Snake-cobra.gif" width="40" height="40" alt="Snake Cobra" style="margin-right: 10px;">
-  
-  <h1 style="margin: 0;">- CobraConfig - </h1>
-  
-  <img src=".github/Snake-cobra.gif" width="40" height="40" alt="Snake Cobra" style="margin-left: 10px;">
-
-</div>
+<h1 align="center">🐍 CobraConfig 🐍</h1>
 
 
 <h3 align="center">the python tool that you can't miss</h3>
@@ -18,7 +11,7 @@
 ________________________
 
 ## WHAT DO I NEED IT FOR? ❓
-Create your next Python project neatly and faster, don't waste time.
+Create your next Python project neatly and faster, don't waste time. 
 
 ## HOW IT WORKS? ⚙️
 Simple: fill out the form according to your needs and you're done!
@@ -57,3 +50,12 @@ node main.js
 ```
 npm run build
 ```
+
+<img src=".github/Snake-cobra.gif" width="100" height="100" alt="Snake Cobra" style="margin-right: 10px;"><img src=".github/Snake-cobra.gif" width="100" height="100" alt="Snake Cobra" style="margin-right: 10px;">
+<img src=".github/Snake-cobra.gif" width="100" height="100" alt="Snake Cobra" style="margin-right: 10px;">
+<img src=".github/Snake-cobra.gif" width="100" height="100" alt="Snake Cobra" style="margin-right: 10px;"><img src=".github/Snake-cobra.gif" width="100" height="100" alt="Snake Cobra" style="margin-right: 10px;">
+<img src=".github/Snake-cobra.gif" width="100" height="100" alt="Snake Cobra" style="margin-right: 10px;">
+<img src=".github/Snake-cobra.gif" width="100" height="100" alt="Snake Cobra" style="margin-right: 10px;">
+<img src=".github/Snake-cobra.gif" width="100" height="100" alt="Snake Cobra" style="margin-right: 10px;">
+
+

@@ -187,15 +187,6 @@ async function installDependencies(folderPath, virtualEnvName, requirementsPath,
   });
 }
 
-// Funzione per creare una struttura di cartelle
-function createFolderStructure(folderPath, folderStructure) {
-  folderStructure.forEach((subFolder) => {
-    const subFolderPath = path.join(folderPath, subFolder);
-    fs.mkdirSync(subFolderPath, { recursive: true });
-    console.log(chalk.green(`Folder '${subFolder}' created successfully 📂`));
-  });
-}
-
 // Funzione per creare un file .gitignore
 function createGitignore(folderPath) {
   const gitignoreContent = `# Ignore virtual environments
