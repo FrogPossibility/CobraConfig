@@ -56,7 +56,7 @@ npm run build
 
 ## TO DO:
 
-- [X]  put the project on NPM so it can be used without install. It would be nice to run `npx cobraConfig` to launch this.
+- [X]  ~~put the project on NPM so it can be used without install. It would be nice to run `npx cobraConfig` to launch this.~~
 - [ ] adding a real-time project structure 
 of the project that will be created
 
