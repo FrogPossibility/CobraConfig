@@ -1,7 +1,15 @@
 <p align="center">
   <img src=".github/icon.ico" alt="drawing" width="200"/>
 </p>
-<h1 align="center">CobraConfig 🐍</h1>
+<div style="display: flex; align-items: center; justify-content: center;">
+
+  <img src=".github/Snake-cobra.gif" width="40" height="40" alt="Snake Cobra" style="margin-right: 10px;">
+  
+  <h1 style="margin: 0;">- CobraConfig - </h1>
+  
+  <img src=".github/Snake-cobra.gif" width="40" height="40" alt="Snake Cobra" style="margin-left: 10px;">
+
+</div>
 
 
 <h3 align="center">the python tool that you can't miss</h3>
