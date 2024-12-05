@@ -7,7 +7,10 @@
 
 <h3 align="center">the python tool that you can't miss</h3>
 
-
+```
+npm install cobraconfig
+npx cobraconfig
+```
 ________________________
 
 ## WHAT DO I NEED IT FOR? ❓
