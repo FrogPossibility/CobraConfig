@@ -1,17 +1,17 @@
 <p align="center">
   <img src=".github/icon.ico" alt="drawing" width="200"/>
 </p>
-
-<h1 align="center">🐍 CobraConfig 🐍</h1>
-
-
-<h3 align="center">the python tool that you can't miss</h3>
+<p align="center">
+  <img src="https://img.shields.io/badge/🐍_CobraConfig_🐍-darkgreen" alt="drawing" width="300"/>
+</p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/CobraConfig-blue?style=plastic" alt="drawing" width="100"/>
-  <img src="https://img.shields.io/badge/best_tool-yellow?style=plastic" alt="drawing" width="100"/>
-  <img src="https://img.shields.io/badge/In_the_world-green?style=plastic" alt="drawing" width="100"/>
+  <img src="https://img.shields.io/badge/the_python_tool-blue?style=plastic" alt="drawing" width="160"/>
+  <img src="https://img.shields.io/badge/that_you-yellow?style=plastic" alt="drawing" width="100"/>
+  <img src="https://img.shields.io/badge/can't_miss-green?style=plastic" alt="drawing" width="110"/>
 </p>
+
+__________
 
 <p align="center">
   <img src="https://img.shields.io/github/stars/FrogPossibility/CobraConfig" alt="drawing" width="90"/>
@@ -26,11 +26,6 @@
   <img src="https://img.shields.io/github/watchers/FrogPossibility/CobraConfig" alt="drawing" width="110"/>
   <img src="https://img.shields.io/github/package-json/v/FrogPossibility/CobraConfig?style=plastic&color=red" alt="drawing" width="120"/>
 </p>
-
- https://img.shields.io/github/package-json/v/FrogPossibility/CobraConfig?style=plastic&color=red
-
-
-
 
 
 
@@ -87,11 +82,11 @@ npm run build
 - [ ] adding a real-time project structure 
 of the project that will be created
 
-<img src=".github/Snake-cobra.gif" width="100" height="100" alt="Snake Cobra" style="margin-right: 10px;"><img src=".github/Snake-cobra.gif" width="100" height="100" alt="Snake Cobra" style="margin-right: 10px;">
-<img src=".github/Snake-cobra.gif" width="100" height="100" alt="Snake Cobra" style="margin-right: 10px;">
-<img src=".github/Snake-cobra.gif" width="100" height="100" alt="Snake Cobra" style="margin-right: 10px;"><img src=".github/Snake-cobra.gif" width="100" height="100" alt="Snake Cobra" style="margin-right: 10px;">
-<img src=".github/Snake-cobra.gif" width="100" height="100" alt="Snake Cobra" style="margin-right: 10px;">
-<img src=".github/Snake-cobra.gif" width="100" height="100" alt="Snake Cobra" style="margin-right: 10px;">
-<img src=".github/Snake-cobra.gif" width="100" height="100" alt="Snake Cobra" style="margin-right: 10px;">
+<p align="center">
+  <img src=".github/Snake-cobra.gif" width="100" height="100" alt="Snake Cobra" style="margin-right: 10px;"><img src=".github/Snake-cobra.gif" width="100" height="100" alt="Snake Cobra" style="margin-right: 10px;">
+  <img src=".github/Snake-cobra.gif" width="100" height="100" alt="Snake Cobra" style="margin-right: 10px;">
+  <img src=".github/Snake-cobra.gif" width="100" height="100" alt="Snake Cobra" style="margin-right: 10px;"><img src=".github/Snake-cobra.gif" width="100" height="100" alt="Snake Cobra" style="margin-right: 10px;">
+  <img src=".github/Snake-cobra.gif" width="100" height="100" alt="Snake Cobra" style="margin-right: 10px;">
+</p>
 
 
