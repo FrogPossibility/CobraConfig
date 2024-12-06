@@ -7,6 +7,33 @@
 
 <h3 align="center">the python tool that you can't miss</h3>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/CobraConfig-blue?style=plastic" alt="drawing" width="100"/>
+  <img src="https://img.shields.io/badge/best_tool-yellow?style=plastic" alt="drawing" width="100"/>
+  <img src="https://img.shields.io/badge/In_the_world-green?style=plastic" alt="drawing" width="100"/>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/stars/FrogPossibility/CobraConfig" alt="drawing" width="90"/>
+  <img src="https://img.shields.io/npm/d18m/cobraconfig?style=plastic&label=npm%20downloads" width="150"/>
+  <img src="https://img.shields.io/github/downloads/FrogPossibility/CobraConfig/total?style=plastic&label=Installer%20downloads" alt="drawing" width="170"/>
+  <img src="https://img.shields.io/github/search/FrogPossibility/CobraConfig/cobraconfig?style=plastic&label=searches" alt="drawing" width="100"/>
+  <img src="https://img.shields.io/github/forks/FrogPossibility/CobraConfig" alt="drawing" width="90"/>
+  <img src="https://img.shields.io/github/commit-activity/t/FrogPossibility/CobraConfig?style=plastic&color=red" alt="drawing" width="110"/>
+  <img src="https://img.shields.io/github/release-date/FrogPossibility/CobraConfig?style=plastic" alt="drawing" width="230"/>
+  <img src="https://img.shields.io/github/repo-size/FrogPossibility/CobraConfig?style=plastic" alt="drawing" width="140"/>
+  <img src="https://img.shields.io/npm/unpacked-size/cobraconfig?style=plastic&label=npm%20size" alt="drawing" width="150"/>
+  <img src="https://img.shields.io/github/watchers/FrogPossibility/CobraConfig" alt="drawing" width="110"/>
+  <img src="https://img.shields.io/github/package-json/v/FrogPossibility/CobraConfig?style=plastic&color=red" alt="drawing" width="120"/>
+</p>
+
+ https://img.shields.io/github/package-json/v/FrogPossibility/CobraConfig?style=plastic&color=red
+
+
+
+
+
+
 ```
 npm install cobraconfig
 npx cobraconfig
