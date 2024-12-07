@@ -12,6 +12,10 @@
 </p>
 
 __________
+```
+npm install cobraconfig
+npx cobraconfig
+```
 
 <p align="center">
   <img src="https://img.shields.io/github/stars/FrogPossibility/CobraConfig" alt="drawing" width="70"/>
@@ -29,10 +33,6 @@ __________
 
 
 
-```
-npm install cobraconfig
-npx cobraconfig
-```
 ________________________
 
 ## WHAT DO I NEED IT FOR? ❓
