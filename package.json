@@ -5,7 +5,8 @@
     "main": "index.js",
     "scripts": {
         "start": "node index.js",
-        "build": "pkg . --targets node16-win-x64 --output CobraConfig.exe"
+        "build": "pkg . --targets node16-win-x64 --output CobraConfig.exe",
+        "test": "node index.js"
     },
     "bin": "index.js",
     "pkg": {
