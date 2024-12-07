@@ -1,6 +1,6 @@
 {
     "name": "cobraconfig",
-    "version": "1.3.0",
+    "version": "1.3.1",
     "description": "A python tool that cannot fail to exist on your hard drive, what is it for? Everything to set up a good Python project, whether to train an AI or for a novice newbie. Use it",
     "main": "index.js",
     "scripts": {
