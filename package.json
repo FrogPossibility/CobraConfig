@@ -6,7 +6,7 @@
     "scripts": {
         "start": "node index.js",
         "build": "pkg . --targets node16-win-x64 --output CobraConfig.exe",
-        "test": "node index.js"
+        "test": "node index.js --non-interactive"
     },
     "bin": "index.js",
     "pkg": {
