@@ -31,7 +31,9 @@ npx cobraconfig
   <img src="https://img.shields.io/github/package-json/v/FrogPossibility/CobraConfig?style=plastic&color=red" alt="drawing" width="100"/>
 </p>
 
-
+- NPM : https://www.npmjs.com/package/cobraconfig
+- DEV.to : https://dev.to/frogpossibility
+- GITHUB : https://github.com/FrogPossibility
 
 ________________________
 
